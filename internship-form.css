@@ -1,0 +1,1232 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/*.......................Navbar.....................*/
+
+nav{
+    background-color: #0049B1;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li{
+    padding: 0.1em 0.5em 0.1em 0.5em;
+}
+
+nav ul li a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 1em;
+}
+
+nav ul li a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.35rem;
+    background: #74aeff;
+    left: 0;
+    bottom: 0;
+    transform: scale(0, 1);
+    transition: transform 0.4s ease-out;
+}
+
+nav ul li a:hover::after{
+    transform: scale(1, 1);
+}
+
+nav ul li i{
+    color: white;
+}
+
+.logo1{
+    height: 3.5em;
+    width: 4em;
+ }
+ 
+ .logo2{
+     height: 1em;
+     width: 5em;
+ }
+
+ .company-logo{
+     margin-right: 2em;
+ }
+
+ .nasscom-div{
+    background-color: white;
+    border-radius: 12px;
+    margin-right: 1em;
+    max-height: 3.5em;
+    padding: 5px;
+}
+ 
+ .nasscom-div p{
+     text-align: center;
+     font-weight: 600;
+     text-transform: uppercase;
+ }
+
+.navbar-toggle{
+    display: none;
+}
+
+/* Internship Form */
+.container{
+    flex: 1;
+}
+
+.main-content{
+    margin: 3em auto;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 3em;
+    justify-content: center;
+}
+
+.main-content .progress-bar{
+    max-height: 22em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-bar ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em;
+    border-radius: 2em;
+    box-shadow: #959da533 0px 8px 24px;
+}
+.progress-bar ul li{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.progress-bar ul li .text{
+    font-size: 1em;
+    font-weight: 600;
+    color: #0049B1;
+    text-align: center;
+}
+
+.progress-bar ul li .progress{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #F4F4FC;
+    margin: 14px 45px;
+    display: grid;
+    place-items: center;
+    color: #0049B1;
+    position: relative;
+    cursor: pointer;
+}
+.progress::after{
+    content: " ";
+    position: absolute;
+    width: 90px;
+    height: 7px;
+    background-color: #F4F4FC;
+    right: 30px;
+}
+
+.one::after{
+    width: 0;
+    height: 0;
+}
+
+ul li .progress .fa-check{
+    display: none;
+    color: #F4F4FC;
+}
+
+ul li .progress p{
+    font-size: 1em;
+}
+
+.progress-bar ul li .active{
+    background-color: #0049B1;
+    display: grid;
+    place-items: center;
+}
+.progress-bar li .active::after{
+    background-color: #0049B1;
+}
+.progress-bar ul li .active p{
+    display: none;
+}
+
+ul li .active .fa-check{
+    display: block;
+}
+
+.form-content{
+    padding: 1em;
+}
+
+.form-container{
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.active__form{
+    display: none;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nxt__btn, .prev__btn{
+    display: block;
+    width: 5em;
+    text-align: center;
+    padding: 0.7em;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 2em;
+    background: #F4F4FC;
+    color: #0049B1;
+    border: none;
+    outline: none;
+    margin-bottom: 0.5em;
+}
+
+.nxt__btn:hover, .prev__btn:hover{
+    color: #F4F4FC;
+    background-color: #0049B1;
+    cursor: pointer;
+}
+
+/* .......................Form 1..................... */
+
+#form-1{
+    padding: 2em 2em 1em 2em;
+    margin: auto;
+    max-width: 700px;
+    border-radius: 2em;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.form-heading{
+    color: #0049B1;
+    border-bottom: 4px solid #0049B1;
+    margin-bottom: 1em;
+}
+
+.form1-row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 0;
+}
+
+.form-details{
+    padding: 10px;
+}
+
+.form-details label{
+    display: block;
+    font-size: 1em;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+    color: #0049B1;
+    letter-spacing: 1px;
+}
+label span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .astrick {
+    color: red;
+    display: inline-block;
+    margin-left: 0px;
+    vertical-align: middle;
+  }
+.form-details input{
+    width: 16em;
+    padding: 1em 1.2em;
+    font-size: 1em;
+    letter-spacing: 1px;
+    border-radius: 2em;
+    border-color: white;
+    outline: none;
+    color: #0049B1;
+    background-color: #F4F4FC;
+}
+
+.form1-row .form-details .error-msg{
+    color: red;
+    font-size: 10px;
+    height: 13px;
+}
+ 
+.form-details input:hover{
+    border-color: rgba(213, 221, 228, 0);
+}
+.gender{
+    margin-bottom: 1em;
+}
+
+.gender .heading{
+    display: block;
+    font-size: 1em;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+    color: #0049B1;
+    letter-spacing: 1px;
+}
+
+.gender .options{
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 400;
+    padding: 0;
+    color: #0049B1;
+}
+
+.gender .options label input[type='radio']{
+    display: none;
+}
+
+.gender .options label{
+    display: block;
+    cursor: pointer;
+}
+
+.gender .options span{
+    display: inline-flex;
+    align-items: center;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 2em;
+    transition: 0.2s ease;
+    cursor: pointer; 
+}
+
+.gender .options span:hover, input[type="radio"]:checked + span{
+    background-color: #F4F4FC; 
+}
+
+.gender .options span::before{
+    content: "";
+    background-color: white;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: 0.25 ease;
+    box-shadow: inset 0 0 0 2px #0049B1;
+}
+
+.gender .options input[type="radio"]:checked + span::before{
+    box-shadow: inset 0 0 0 7px #0049B1;
+}
+
+/* ..........................Form 2.......................... */
+
+#form-2{
+    padding: 2em 2em 1em 2em;
+    margin: auto;
+    max-width: 700px;
+    border-radius: 2em;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.form2-row{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.form2-row .form2-img, .form2-details{
+    padding: 0;
+}
+
+.form2-row .form2-img img{
+    width: 16em;
+    height: 16em;
+}
+
+.form2-row .form2-details{
+    margin: auto;
+}
+
+.form2-row .form2-details .form2-fields label{
+    display: block;
+    font-size: 1em;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+    color: #0049B1;
+    letter-spacing: 1px;
+}
+
+.form2-row .form2-details .form2-fields input{
+    width: 20em;
+    padding: 1em 1.2em;
+    letter-spacing: 1px;
+    font-size: 15px;
+    border-radius: 2em;
+    border: none;
+    outline: none;
+    color: #0049B1;
+    background-color: #F4F4FC;
+}
+
+::placeholder {
+    color: #0049B1;
+}
+
+/* ..........................Form 3.......................... */
+
+#form-3{
+    padding: 2em 2em 1em 2em;
+    margin: auto;
+    max-width: 700px;
+    border-radius: 2em;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.heading{
+    color: #0049B1;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 1em;
+}
+
+.option-group{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 1em;
+}
+
+.internship-option{
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+.internship-option label input[type='radio']{
+    display: none;
+}
+
+.internship-option label{
+    display: block;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: #0049B1;
+}
+
+.internship-option span{
+    display: inline-flex;
+    align-items: center;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 2em;
+    transition: 0.2s ease;
+    cursor: pointer; 
+}
+
+.internship-option span:hover, input[type="radio"]:checked + span{
+    background-color: #F4F4FC; 
+}
+
+.internship-option span::before{
+    content: "";
+    background-color: white;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: 0.25 ease;
+    box-shadow: inset 0 0 0 2px #0049B1;
+}
+
+.internship-option input[type="radio"]:checked + span::before{
+    box-shadow: inset 0 0 0 7px #0049B1;
+}
+
+.internship-option input[type = "text"]{
+    background-color: #F4F4FC;
+    color: #0049B1;
+    outline: none;
+    border: none;
+    border-radius: 2em;
+    padding: 0.8em;
+    font-size: 14px;
+    display: none;
+}
+
+/* ..........................Form 4.......................... */
+
+#form-4{
+    padding: 2em 2em 1em 2em;
+    max-width: 700px;
+    margin: auto;
+    font-size: 16px;
+    border-radius: 2em;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.internship-type{
+    color: #0049B1;
+    padding-top: 0;
+    text-align: justify;
+}
+
+.internship-type p{
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.internship-type ul{
+    margin: 10px 0;
+}
+
+.form4-option{
+    margin-bottom: 1em;
+}
+
+.form4-option .heading{
+    display: block;
+    font-size: 1em;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+    color: #0049B1;
+    letter-spacing: 1px;
+}
+
+.form4-option .options{
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 400;
+    padding: 0;
+    color: #0049B1;
+}
+
+.form4-option .options label input[type='radio']{
+    display: none;
+}
+
+.form4-option .options label{
+    display: block;
+    cursor: pointer;
+}
+
+.form4-option .options span{
+    display: inline-flex;
+    align-items: center;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 2em;
+    transition: 0.2s ease;
+    cursor: pointer; 
+}
+
+.form4-option .options span:hover, input[type="radio"]:checked + span{
+    background-color: #F4F4FC; 
+}
+
+.form4-option .options span::before{
+    content: "";
+    background-color: white;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: 0.25 ease;
+    box-shadow: inset 0 0 0 2px #0049B1;
+}
+
+.form4-option .options input[type="radio"]:checked + span::before{
+    box-shadow: inset 0 0 0 7px #0049B1;
+}
+
+label .form4-checkbox{
+    padding: 1em;
+    display: none;
+}
+
+label .form4-checkbox input[type = "checkbox"]{
+    cursor: pointer;
+    position: relative;
+}
+
+label .form4-checkbox input[type = "checkbox"]::before{
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 2px solid #0049B1;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.2s all ease;
+}
+
+label .form4-checkbox input[type = "checkbox"]:checked::before{
+    box-shadow: inset 0 0 0 5px #0049B1;
+}
+
+label .form4-checkbox span{
+    margin-left: 0.5em;
+    color: #0049B1;
+    font-size: 16px;
+}
+
+.start-date label{
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+    color: #0049B1;
+}
+
+.start-date input[type = "date"]{
+    width: 100%;
+    padding: 1em 1.2em;
+    font-size: 1em;
+    letter-spacing: 1px;
+    border-radius: 2em;
+    border: none;
+    outline: none;
+    color: #0049B1;
+    background-color: #F4F4FC;
+    margin-bottom: 1em;
+  }
+
+  ::placeholder {
+    color: #0049B1;
+  }
+
+/* ..........................Form 5.......................... */
+
+#form-5{
+    padding: 2em 2em 1em 2em;
+    max-width: 650px;
+    margin: auto;
+    border-radius: 2em;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.form5-fields{
+    padding: 0;
+    margin-bottom: 1em;
+}
+
+.form5-refer{
+    padding: 0;
+    margin-bottom: 1em;
+}
+
+.form5-fields label, .form5-refer label{
+    display: block;
+    font-size: 1em;
+    font-weight: 600;
+    margin-bottom: 1em;
+    color: #0049B1;
+    letter-spacing: 1px;
+}
+
+.form5-fields input{
+    width: 100%;
+    padding: 1em 1.2em;
+    font-size: 1em;
+    letter-spacing: 1px;
+    border-radius: 2em;
+    border: none;
+    outline: none;
+    color: #0049B1;
+    background-color: #F4F4FC;
+}
+
+.form5-refer h3{
+    color: #0049B1;
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+.form5-refer input[type = "text"]{
+    width: 75%;
+    padding: 1em 1.2em;
+    font-size: 1em;
+    letter-spacing: 1px;
+    border-radius: 2em;
+    border: none;
+    outline: none;
+    color: #0049B1;
+    background-color: #F4F4FC;
+    overflow: hidden;
+}
+
+.form5-refer input[type = "button"]{
+    margin-left: 5px;
+    padding: 10px;
+    font-size: 1em;
+    font-weight: 900;
+    border-radius: 1em;
+    border: none;
+    outline: none;
+    color: #F4F4FC;
+    background-color: #0049B1;
+    overflow: hidden;
+}
+
+/* ..........................Form 6.......................... */
+
+#form-6{
+    padding: 2em 2em 1em 2em;
+    margin: auto;
+    max-width: 700px;
+    border-radius: 2em;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.form6-body{
+    padding: 0;
+}
+
+.form6-body h3{
+    color: #0049B1;
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+.form6-body p{
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    letter-spacing: 1px;
+    font-style: italic;
+    color: #0049B1;
+    margin-bottom: 1em;
+}
+
+.form6-body label{
+    display: block;
+    font-size: 1em;
+    font-weight: 600;
+    margin-bottom: 1em;
+    color: #0049B1;
+    letter-spacing: 1px;
+}
+
+.form6-body label .my-checkbox input[type = "checkbox"]{
+    cursor: pointer;
+    position: relative;
+}
+
+.form6-body label .my-checkbox input[type = "checkbox"]::before{
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 2px solid #0049B1;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.2s all ease;
+}
+
+.form6-body label .my-checkbox input[type = "checkbox"]:checked::before{
+    box-shadow: inset 0 0 0 5px #0049B1;
+}
+
+.form6-body label .my-checkbox span{
+    margin-left: 0.5em;
+    color: #0049B1;
+    font-size: 18px;
+}
+
+.captcha{
+    color: #0049B1;
+    padding: 0;
+    margin-bottom: 1em;
+}
+
+.captcha p{
+    font-weight: 600;
+}
+
+#submit_button{
+    display: none;
+}
+
+
+/* ..........................Footer....................... */
+
+.footer{
+    background-color: #0049B1;
+}
+
+.footer-top{
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+    text-align: center;
+}
+
+.footer-contents{
+    flex-basis: 25%;
+    padding: 4em 0;
+}
+
+.footer-contents h5{
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+.footer-contents a{
+    padding-top: 1em;
+    font-size: 0.9em;
+    display: block;
+    text-decoration: none;
+    color: #e3e3e3;
+}
+
+.footer-contents a:hover{
+    text-decoration: underline;
+    color: white;
+    transition: 0.3s;
+}
+
+.footer-images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+    padding: 0;
+}
+
+.footer-images .footer-image{
+    color: white;
+    padding: 0;
+}
+
+.footer-bottom{
+    padding: 0;
+}
+
+.footer-bottom p{
+    text-align: center;
+    color: #e3e3e3;
+    padding: 1em;
+}
+
+
+ /* ........................Form Media Queries.......................... */
+
+ @media (max-width: 800px){
+
+    #form-1, #form-2, #form-3, #form-4, #form-5, #form-6{
+        margin: auto;
+        width: 100%;
+    }
+
+     /* ..........................Form-1................................. */
+
+    .form1-row{
+        flex-direction: column;
+    }
+
+    .form-details input{
+        width: 100%;
+    }
+
+     /* ..........................Form-2................................. */
+
+     .form2-row{
+        flex-direction: column;
+        margin-bottom: 2em;
+    }
+
+    .form2-row .form2-details{
+        width: 100%;
+    }
+
+    .form2-row .form2-img{
+        margin: auto;
+    }
+
+    .form2-row .form2-img img{
+        width: 20em;
+        height: 22em;
+    }
+
+    .form2-row .form2-details .form2-fields{
+        margin-bottom: 1em;
+    }
+
+    .form2-row .form2-details .form2-fields input{
+        width: 100%;
+    }
+}
+
+  @media (min-width: 425px) and (max-width: 768px){
+    nav{
+        background-color: #F9F9F9;
+    }
+
+    .navbar-toggle{
+        display: block;
+        margin-right: 1em;
+        cursor: pointer;
+    }
+
+    .navbar-toggle i{
+        font-size: 30px;
+    }
+
+    .nasscom-div{
+        background-color: #F9F9F9;
+    }
+
+    .nasscom-div img{
+        display: block;
+        margin: auto;
+    }
+
+    .nasscom{
+        flex: 2;
+    }
+
+    .nav-links{
+        display: none;
+        width: 100%;
+    }
+
+    .nav-links a, .navbar-toggle i{
+        color: black;
+    }
+
+    .active{
+        display: block;
+    }
+
+    .option-group{
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+    }
+
+    .footer-contents{
+        flex-basis: 50%;
+    }
+  }
+
+  @media (min-width: 325px) and (max-width: 425px){
+    nav{
+        background-color: #F9F9F9;
+    }
+
+    .navbar-toggle{
+        display: block;
+        margin-right: 1em;
+        cursor: pointer;
+    }
+
+    .navbar-toggle i{
+        font-size: 30px;
+    }
+
+    .nasscom-div{
+        background-color: #F9F9F9;
+    }
+
+    .nasscom-div img{
+        display: block;
+        margin: auto;
+    }
+
+    .nasscom{
+        flex: 2;
+    }
+
+    .nav-links{
+        display: none;
+        width: 100%;
+    }
+
+    .nav-links a, .navbar-toggle i{
+        color: black;
+    }
+
+    .active{
+        display: block;
+    }
+
+    .main-content{
+        margin: 2em auto;
+        gap: 0;
+    }
+
+    #form-1, #form-2, #form-3, #form-4, #form-5, #form-6{
+        box-shadow: none;
+        padding: 0;
+    }
+
+    #form-4 .internship-type, #form-4 .form4-option, #form-4 .no-stipend .form4-checkbox span, #form-4 .start-date{
+        font-size: 12px;
+    }
+
+    .form-heading{
+        font-size: 1.8em;
+    }
+
+    .gender .options{
+        flex-direction: column;
+    }
+
+    .form2-row .form2-img img{
+        width: 16em;
+        height: 15em;
+    }
+
+    .option-group{
+        grid-template-columns: repeat(1, minmax(100px, 1fr));
+    }
+
+    .internship-option{
+        margin-left: 2em;
+    }
+
+    label .form4-checkbox{
+        padding: 12px;
+    }
+
+    label .form4-checkbox span{
+        font-size: 12px;
+    }
+
+    label .form4-checkbox input[type = "checkbox"]::before{
+        height: 15px;
+        width: 15px;
+        top: 60%;
+    }
+
+    .footer-contents{
+        flex-basis: 100%;
+    }
+
+    .footer-image{
+        flex-basis: 50%;
+        text-align: center;
+    }
+
+    .footer-image img{
+        display: block;
+        margin: 1em auto;
+    }
+
+    
+  }
+
+
+  @media (max-width: 325px){
+    nav{
+        background-color: #F9F9F9;
+    }
+
+    .navbar-toggle{
+        display: block;
+        margin-right: 1em;
+        cursor: pointer;
+    }
+
+    .navbar-toggle i{
+        font-size: 30px;
+    }
+
+    .nasscom-div{
+        background-color: #F9F9F9;
+    }
+
+    .nasscom-div img{
+        display: block;
+        margin: auto;
+    }
+
+    .nasscom{
+        flex: 2;
+    }
+
+    .nav-links{
+        display: none;
+        width: 100%;
+    }
+
+    .nav-links a, .navbar-toggle i{
+        color: black;
+    }
+
+    .active{
+        display: block;
+    }
+
+    .main-content{
+        margin: 2em auto;
+        gap: 0;
+    }
+
+    #form-1, #form-2, #form-3, #form-4, #form-5, #form-6{
+        box-shadow: none;
+        padding: 0;
+    }
+
+    #form-4 .internship-type, #form-4 .form4-option, #form-4 .no-stipend .form4-checkbox span, #form-4 .start-date{
+        font-size: 12px;
+    }
+
+    .form-heading{
+        font-size: 1.8em;
+    }
+
+    .gender .options{
+        flex-direction: column;
+    }
+
+    .form2-row .form2-img img{
+        width: 16em;
+        height: 15em;
+    }
+
+    .option-group{
+        grid-template-columns: repeat(1, minmax(100px, 1fr));
+    }
+
+    .internship-option{
+        margin-left: 3em;
+    }
+
+    label .form4-checkbox{
+        padding: 12px;
+    }
+
+    label .form4-checkbox span{
+        font-size: 12px;
+    }
+
+    label .form4-checkbox input[type = "checkbox"]::before{
+        height: 15px;
+        width: 15px;
+        top: 60%;
+    }
+
+    .footer-contents{
+        flex-basis: 100%;
+    }
+
+    .footer-image{
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .footer-image img{
+        display: block;
+        margin: 1em auto;
+    }
+  }
+
+
+  /* .............................Progress Bar Media Queries............................. */
+
+  @media (max-width: 850px){
+    .progress-bar ul li .progress{
+        margin: 14px 35px;
+    }
+    .progress::after{
+        width: 70px;
+    }
+}
+
+@media (min-width: 550px) and (max-width: 768px){
+    .progress-bar ul li .text{
+        font-size: 12px;
+    }
+
+    .progress-bar ul li .progress{
+        margin: 14px 20px;
+    }
+    .progress::after{
+        width: 40px;
+    }
+}
+
+@media (max-width: 550px) {
+    .progress-bar ul{
+        box-shadow: none;
+        /* flex-direction: column; */
+        /* padding: 2em 6em 2em 5em; */
+    }
+
+    /* .progress-bar ul li{
+        flex-direction: row;
+    } */
+
+    .progress-bar ul li .progress{
+        margin: 15px 8px;
+    }
+
+    .progress-bar ul li .text{
+        display: none;
+    }
+
+    .progress::after{
+        width: 65px;
+        height: 5px;
+        /* bottom: 30px; */
+        left: 50%;
+        transform: translateX(-80%);
+        z-index: -1;
+    }
+
+    .one::after{
+        height: 0;
+    }
+}
+
+/* .error {
+    color: red;
+    border: 1px solid red;
+  } */
