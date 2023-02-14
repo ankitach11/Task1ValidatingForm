@@ -224,7 +224,7 @@ function validateForm1() {
   var contactPattern = /^[0-9]{10}$/;
   const re =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  const countryRegex = /^[A-Z][A-Za-z\s]+$/;
+  const countryRegex = /^[A-Za-z][A-Za-z\s]+$/
 
   if (firstName.value == "") {
     firstName.style.borderColor = "rgb(255, 153, 153)";
