@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@700;900&family=Open+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="internship-form.css" />
+
+    <!-- JQuery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+      integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <title>KGE Technologies/Internships</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <ul>
+        <li class="company-logo">
+          <img src="Images/Logo.avif" alt="" class="logo1" />
+        </li>
+        <li class="nasscom">
+          <div class="nasscom-div">
+            <img src="Images/nassccom-logo.png" alt="" class="logo2" />
+            <p>Member</p>
+          </div>
+        </li>
+        <li class="navbar-toggle"><i class="fa-solid fa-bars"></i></li>
+        <li class="nav-links"><a href="#">Home</a></li>
+        <li class="nav-links"><a href="#">Certificate Verification</a></li>
+        <li class="nav-links"><a href="#">Certificate Details</a></li>
+      </ul>
+    </nav>
+
+    <!-- Internship Form -->
+    <div class="container">
+      <div class="main-content">
+        <div class="progress-bar">
+          <ul>
+            <li>
+              <div class="progress one">
+                <p id="icon1"><i class="fa-solid fa-1"></i></p>
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <p class="text">
+                Personal <br />
+                Details
+              </p>
+            </li>
+            <li>
+              <div class="progress two">
+                <p id="icon2"><i class="fa-solid fa-2"></i></p>
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <p class="text">
+                Educational <br />
+                Details
+              </p>
+            </li>
+            <li>
+              <div class="progress three">
+                <p id="icon3"><i class="fa-solid fa-3"></i></p>
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <p class="text">
+                Interested <br />
+                Field
+              </p>
+            </li>
+            <li>
+              <div class="progress four">
+                <p id="icon4"><i class="fa-solid fa-4"></i></p>
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <p class="text">
+                Internship <br />
+                Option
+              </p>
+            </li>
+            <li>
+              <div class="progress five">
+                <p id="icon5"><i class="fa-solid fa-5"></i></p>
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <p class="text">References</p>
+            </li>
+            <li>
+              <div class="progress six">
+                <p id="icon6"><i class="fa-solid fa-6"></i></p>
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <p class="text">Submission</p>
+            </li>
+          </ul>
+        </div>
+        <div class="form-content">
+          <div class="form-container">
+            <form name="form1_personalDetails" action="#" id="form-1">
+              <h1 class="form-heading">Personal Details</h1>
+              <div class="form1-row">
+                <div class="form-details">
+                  <label for="fname">
+                    <span>First Name</span>
+                    <div class="astrick">*</div>
+                  </label>
+                  <input type="text" name="fname" id="fname" required />
+                  <br /><br />
+                  <span id="errorMessage1" style="color: red"></span>
+                </div>
+                <div class="form-details">
+                  <label for="lname">
+                    <span>Last Name</span>
+                    <div class="astrick">*</div>
+                  </label>
+                  <input type="text" name="lname" id="lname" required />
+                  <br /><br />
+                  <span id="errorMessage2" style="color: red"></span>
+                </div>
+              </div>
+              <div class="form1-row">
+                <div class="form-details">
+                  <label for="contact-number">
+                    <span>Contact Number</span>
+                    <div class="astrick">*</div>
+                  </label>
+                  <input
+                    type="number"
+                    name="contact-number"
+                    id="contact-number"
+                    required
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  />
+                  <br /><br />
+                  <span id="errorMessage3" style="color: red"></span>
+                </div>
+                <div class="form-details">
+                  <label for="email">
+                    <span>Email</span>
+                    <div class="astrick">*</div>
+                  </label>
+                  <input type="email" name="email" id="email" required />
+                  <br /><br />
+                  <span id="errorMessage4" style="color: red"></span>
+                </div>
+              </div>
+              <div class="form1-row">
+                <div class="form-details">
+                  <label for="whatsapp">
+                    <span>Whatsapp</span>
+                    <div class="astrick">*</div>
+                  </label>
+                  <input
+                    type="number"
+                    name="whatsapp"
+                    id="whatsapp"
+                    required
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  />
+                  <br /><br />
+                  <span id="errorMessage5" style="color: red"></span>
+                </div>
+                <div class="form-details">
+                  <label for="country">
+                    <span>Country</span>
+                    <div class="astrick">*</div>
+                  </label>
+                  <input type="text" name="country" id="country" required />
+                  <br /><br />
+                  <span id="errorMessage6" style="color: red"></span>
+                </div>
+              </div>
+              <div class="gender">
+                <label for="gender" class="heading">
+                  <span>Gender</span>
+                  <div class="astrick">*</div>
+                </label>
+                <div class="options">
+                  <label>
+                    <input type="radio" name="gender" id="male" />
+                    <span>Male</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="gender" id="female" />
+                    <span>Female</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="gender" id="transgender" />
+                    <span>Transgender</span>
+                  </label>
+                </div>
+                <br />
+                <span id="errorMessage7" style="color: red"></span>
+              </div>
+              <div class="buttons">
+                <a class="nxt__btn" onclick="nextForm();topFunction();">Next</a>
+              </div>
+            </form>
+          </div>
+
+          <div class="form-container">
+            <form action="#" id="form-2" class="active__form">
+              <h1 class="form-heading">Educational Details</h1>
+              <div class="form2-row">
+                <div class="form2-img">
+                  <img src="Images/form2-img.jpeg" alt="" />
+                </div>
+                <div class="form2-details">
+                  <div class="form2-fields">
+                    <label for="degree">
+                      <span>Current Degree & Branch</span>
+                      <div class="astrick">*</div>
+                    </label>
+                    <input
+                      type="text"
+                      name="degree"
+                      id="degree"
+                      placeholder="Your Recent Degree and Branch"
+                    />
+                    <br />
+                    <span id="errorMessage8" style="color: red"></span>
+                  </div>
+                  <div class="form2-fields">
+                    <label for="passed-out">
+                      <span>Passed Out</span>
+                      <div class="astrick">*</div>
+                    </label>
+                    <input type="number" name="passed-out" id="passed-out" />
+                    <br />
+                    <span id="errorMessage9" style="color: red"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="buttons">
+                <a class="prev__btn" onclick="prevForm();topFunction();"
+                  >Back</a
+                >
+                <a class="nxt__btn" onclick="nextForm();topFunction();">Next</a>
+              </div>
+            </form>
+          </div>
+
+          <div class="form-container">
+            <form action="#" id="form-3" class="active__form">
+              <h1 class="form-heading">Internship Interested Field</h1>
+              <label for="internship" class="heading"
+                >Internship Looking For:
+                <div class="astrick">*</div>
+              </label>
+              <div class="option-group">
+                <br />
+                <span id="errorMessage10" style="color: red"></span>
+                <div class="internship-option">
+                  <label for=".net-mvc">
+                    <input
+                      type="radio"
+                      name="internship"
+                      id=".net-mvc"
+                      onclick="showTextbox();"
+                    />
+                    <span>.Net MVC</span>
+                  </label>
+                </div>
+                <div class="internship-option">
+                  <label for="angular">
+                    <input
+                      type="radio"
+                      name="internship"
+                      id="angular"
+                      onclick="showTextbox();"
+                    />
+                    <span>Angular</span>
+                  </label>
+                </div>
+                <div class="internship-option">
+                  <label for="bba/mba">
+                    <input
+                      type="radio"
+                      name="internship"
+                      id="bba/mba"
+                      onclick="showTextbox();"
+                    />
+                    <span>BBA/MBA</span>
+                  </label>
+                </div>
+                <div class="internship-option">
+                  <label for="business-development">
+                    <input
+                      type="radio"
+                      name="internship"
+                      id="business-development"
+                      onclick="showTextbox();"
+                    />
+                    <span>Business Development</span>
+                  </label>
+                </div>
+                <div class="internship-option">
+                  <label for="digital-marketing">
+                    <input
+                      type="radio"
+                      name="internship"
+                      id="digital-marketing"
+                      onclick="showTextbox();"
+                    />
+                    <span>Digital Marketing</span>
+                  </label>
+                </div>
+                <div class="internship-option">
+                  <label for="finance">
+                    <input
+                      type="radio"
+                      name="internship"
+                      id="finance"
+                      onclick="showTextbox();"
+                    />
+                    <span>Finance</span>
+                  </label>
+                </div>
+                <div class="internship-option">
+                  <label for="flutter/android/ios">
+                    <input
+                      type="radio"
+                      name="internship"
+                      id="flutter/android/ios"
+                      onclick="showTextbox();"
+                    />
+                    <span>Flutter/Android/IOS</span>
+                  </label>
+                </div>
+                <div class="internship-option">
+                  <label for="hr">
+                    <input
+                      type="radio"
+                      name="internship"
+                      id="hr"
+                      onclick="showTextbox();"
+                    />
+                    <span>HR</span>
+                  </label>
+                </div>
+                <div class="internship-option">
+                  <label for="hardware">
+                    <input
+                      type="radio"
+                      name="internship"
+                      id="hardware"
+                      onclick="showTextbox();"
+                    />
+                    <span>Hardware</span>
+                  </label>
+                </div>
+                <div class="internship-option">
+                  <label for="html-ui">
+                    <input
+                      type="radio"
+                      name="internship"
+                      id="html-ui"
+                      onclick="showTextbox();"
+                    />
+                    <span>HTML UI</span>
+                  </label>
+                </div>
+                <div class="internship-option">
+                  <label for="iot">
+                    <input
+                      type="radio"
+                      name="internship"
+                      id="iot"
+                      onclick="showTextbox();"
+                    />
+                    <span>IOT</span>
+                  </label>
+                </div>
+                <div class="internship-option">
+                  <label for="java">
+                    <input
+                      type="radio"
+                      name="internship"
+                      id="java"
+                      onclick="showTextbox();"
+                    />
+                    <span>Java</span>
+                  </label>
+                </div>
+                <div class="internship-option">
+                  <label for="laravel">
+                    <input
+                      type="radio"
+                      name="internship"
+                      id="laravel"
+                      onclick="showTextbox();"
+                    />
+                    <span>Laravel</span>
+                  </label>
+                </div>
+                <div class="internship-option">
+                  <label for="marketing">
+                    <input
+                      type="radio"
+                      name="internship"
+                      id="marketing"
+                      onclick="showTextbox();"
+                    />
+                    <span>Marketing</span>
+                  </label>
+                </div>
+                <div class="internship-option">
+                  <label for="networking">
+                    <input
+                      type="radio"
+                      name="internship"
+                      id="networking"
+                      onclick="showTextbox();"
+                    />
+                    <span>Networking</span>
+                  </label>
+                </div>
+                <div class="internship-option">
+                  <label for="photoshop">
+                    <input
+                      type="radio"
+                      name="internship"
+                      id="photoshop"
+                      onclick="showTextbox();"
+                    />
+                    <span>Photoshop</span>
+                  </label>
+                </div>
+                <div class="internship-option">
+                  <label for="php">
+                    <input
+                      type="radio"
+                      name="internship"
+                      id="php"
+                      onclick="showTextbox();"
+                    />
+                    <span>PHP</span>
+                  </label>
+                </div>
+                <div class="internship-option">
+                  <label for="project-manager">
+                    <input
+                      type="radio"
+                      name="internship"
+                      id="project-manager"
+                      onclick="showTextbox();"
+                    />
+                    <span>Project Manager</span>
+                  </label>
+                </div>
+                <div class="internship-option">
+                  <label for="python">
+                    <input
+                      type="radio"
+                      name="internship"
+                      id="python"
+                      onclick="showTextbox();"
+                    />
+                    <span>Python</span>
+                  </label>
+                </div>
+                <div class="internship-option">
+                  <label for="react">
+                    <input
+                      type="radio"
+                      name="internship"
+                      id="react"
+                      onclick="showTextbox();"
+                    />
+                    <span>React</span>
+                  </label>
+                </div>
+                <div class="internship-option">
+                  <label for="sales">
+                    <input
+                      type="radio"
+                      name="internship"
+                      id="sales"
+                      onclick="showTextbox();"
+                    />
+                    <span>Sales</span>
+                  </label>
+                </div>
+                <div class="internship-option">
+                  <label for="software-development">
+                    <input
+                      type="radio"
+                      name="internship"
+                      id="software-development"
+                      onclick="showTextbox();"
+                    />
+                    <span>Software Development</span>
+                  </label>
+                </div>
+                <div class="internship-option">
+                  <label for="testing">
+                    <input
+                      type="radio"
+                      name="internship"
+                      id="testing"
+                      onclick="showTextbox();"
+                    />
+                    <span>Testing</span>
+                  </label>
+                </div>
+                <div class="internship-option">
+                  <label for="ui-designer">
+                    <input
+                      type="radio"
+                      name="internship"
+                      id="ui-designer"
+                      onclick="showTextbox();"
+                    />
+                    <span>UI Designer(Figma, etc)</span>
+                  </label>
+                </div>
+                <div class="internship-option">
+                  <label for="web-development">
+                    <input
+                      type="radio"
+                      name="internship"
+                      id="web-development"
+                      onclick="showTextbox();"
+                    />
+                    <span>Web Development</span>
+                  </label>
+                </div>
+                <div class="internship-option">
+                  <label for="other">
+                    <input
+                      type="radio"
+                      name="internship"
+                      id="other"
+                      onclick="showTextbox();"
+                    />
+                    <span>Other</span>
+                  </label>
+                </div>
+                <div class="internship-option">
+                  <input type="text" name="internship" id="other-textbox" />
+                </div>
+              </div>
+              <div class="buttons">
+                <a class="prev__btn" onclick="prevForm();topFunction();"
+                  >Back</a
+                >
+                <a class="nxt__btn" onclick="nextForm();topFunction();">Next</a>
+              </div>
+            </form>
+          </div>
+
+          <div class="form-container">
+            <form action="#" id="form-4" class="active__form">
+              <h1 class="form-heading">Internship Option</h1>
+              <div class="internship-type">
+                <p>
+                  Please read the complete details below and choose your option
+                </p>
+                <h4>Option 1: Only Certificate</h4>
+                <ul>
+                  <li>
+                    We would issue you an Internship offer letter, completion
+                    letter on company letterhead, corporate email id, LinkedIn
+                    profile tagging & Recommendation.
+                  </li>
+                  <li>
+                    Still, you can work on a project but we won't expect a 100%
+                    output from you.
+                  </li>
+                  <li>
+                    Enrollment Charges Applicable: 1500INR or 30USD/- for Up to
+                    6 Months Intern Date.
+                  </li>
+                </ul>
+                <h4>
+                  Option 2: If you want to do the project work for KGE
+                  Technologies for real-time projects for free,<span>
+                    lets see how this works.</span
+                  >
+                </h4>
+                <ul>
+                  <li>
+                    We will mail you an offer of internship via email for a
+                    minimum of 1-6 months, based on your needs
+                  </li>
+                  <li>Regularly work on assigned work and give 100% output.</li>
+                  <li>
+                    Office Timing Mon-Friday & Odd Sat your time zone,
+                    attendance mandatory with min 4hrs per day, you need to
+                    login to the tool in your desktop/laptop to track the same.
+                    Allowed to take leave during exams.
+                  </li>
+                  <li>
+                    You need to have desktop or laptop to work on project.
+                  </li>
+                  <li>
+                    Once completed the project work with at least 90% output- we
+                    would give Internship Offer and completion Letter, LinkedIn
+                    profile Tagging with Company.
+                  </li>
+                  <li>
+                    Stipend: Nil during an internship, one time incentive based
+                    on output at last if contribution is excellent and min 90%
+                    output is given.
+                  </li>
+                  <li>
+                    <span>For Time passers this is not suitable option</span>,
+                    we need candidate to be dedicated to work on assigned task
+                    by contributing min 4hrs per day.
+                  </li>
+                </ul>
+              </div>
+              <div class="form4-option">
+                <label for="option" class="heading"
+                  >What Option you want to Choose After Reading Above Program
+                  <div class="astrick">*</div>
+                </label>
+                <div class="options">
+                  <label for="option1">
+                    <input
+                      type="radio"
+                      name="option"
+                      id="option1"
+                      onclick="enable1();"
+                    />
+                    <span>Option 1</span>
+                  </label>
+                  <label for="option2">
+                    <input
+                      type="radio"
+                      name="option"
+                      id="option2"
+                      onclick="enable1();"
+                    />
+                    <span>Option 2</span>
+                  </label>
+                </div>
+                <br />
+                <span id="errorMessage11" style="color: red"></span>
+              </div>
+              <label for="no-stipend">
+                <div class="form4-checkbox" id="form4-checkbox">
+                  <input type="checkbox" name="no-stipend" id="no-stipend" />
+                  <span
+                    >I read above No salary or Stipend paid and I can contribute
+                    to project work. I agree to it when I choose option 2
+                    <div class="astrick">*</div></span
+                  >
+
+                  <br />
+                  <span id="errorMessage12" style="color: red"></span>
+                </div>
+              </label>
+              <div class="start-date">
+                <label for="start-date"
+                  >Tentative Internship Start Date
+                  <div class="astrick">*</div>
+                </label>
+                <input
+                  type="date"
+                  name="start-date"
+                  id="start-date"
+                  value="2023-01-23"
+                />
+                <br />
+                <span id="errorMessage13" style="color: red"></span>
+              </div>
+              <div class="form4-option">
+                <label for="question1" class="heading"
+                  >Do you Have Laptop/Desktop with Internet connectivity to work
+                  <div class="astrick">*</div>
+                </label>
+                <div class="options">
+                  <label for="yes">
+                    <input type="radio" name="question1" id="yes" />
+                    <span>Yes</span>
+                  </label>
+                  <label for="no">
+                    <input type="radio" name="question1" id="no" />
+                    <span>No</span>
+                  </label>
+                </div>
+                <br />
+                <span id="errorMessage14" style="color: red"></span>
+              </div>
+              <div class="buttons">
+                <a class="prev__btn" onclick="prevForm();topFunction();"
+                  >Back</a
+                >
+                <a class="nxt__btn" onclick="nextForm();topFunction();">Next</a>
+              </div>
+            </form>
+          </div>
+
+          <div class="form-container">
+            <form action="#" id="form-5" class="active__form">
+              <h1 class="form-heading">References</h1>
+              <div class="form5-fields">
+                <label for="question2"
+                  >How do you know about the Internship in KGE Technologies Pvt
+                  Ltd
+                  <div class="astrick">*</div>
+                </label>
+                <input type="text" name="question2" id="question2" />
+
+                <br />
+                <span id="errorMessage15" style="color: red"></span>
+              </div>
+              <div class="form5-refer">
+                <h3>Refer Your Circle...</h3>
+                <label for="refer"
+                  >Please do provide their Email Address Or Mobile Number, each
+                  line 1 Contact
+                  <div class="astrick">*</div>
+                </label>
+                <input type="text" name="refer[]" id="person_0" />
+                <input
+                  type="button"
+                  value="+"
+                  class="add-btn"
+                  onclick="addBox()"
+                />
+                <br />
+                <span id="errorMessage16" style="color: red"></span>
+              </div>
+              <div id="refer-box"></div>
+              <div class="buttons">
+                <a class="prev__btn" onclick="prevForm();topFunction();"
+                  >Back</a
+                >
+                <a class="nxt__btn" onclick="nextForm();topFunction();">Next</a>
+              </div>
+            </form>
+          </div>
+
+          <div class="form-container">
+            <form action="#" id="form-6" class="active__form">
+              <h1 class="form-heading">Submission</h1>
+              <div class="form6-body">
+                <h3>Terms and Conditions</h3>
+                <p>
+                  I Agree, KGE Technologies Pvt Ltd to contact me via Email,
+                  Call, SMS, Whatsapp to discuss on my Form Submission for
+                  Internship
+                </p>
+                <label for="terms">
+                  <div class="my-checkbox">
+                    <input
+                      type="checkbox"
+                      name="terms"
+                      id="terms"
+                      onclick="enable()"
+                    />
+                    <span
+                      >I accept the Terms and Conditions.
+                      <div class="astrick">*</div></span
+                    >
+                    <br />
+                    <span id="errorMessage17" style="color: red"></span>
+                  </div>
+                </label>
+              </div>
+              <div class="captcha">
+                <p>Captcha</p>
+              </div>
+              <div class="buttons">
+                <a class="prev__btn" onclick="prevForm();topFunction();"
+                  >Back</a
+                >
+                <a
+                  class="nxt__btn"
+                  id="submit_button"
+                  onclick="nextForm();topFunction();"
+                  >Submit</a
+                >
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-contents">
+          <h5>Services</h5>
+          <a href="#">SEO</a>
+          <a href="#">Graphic Design</a>
+          <a href="#">Web Hosting</a>
+          <a href="#">Logo Design</a>
+        </div>
+
+        <div class="footer-contents">
+          <h5>Marketing</h5>
+          <a href="#">Digital Marketing</a>
+          <a href="#">Email Marketing</a>
+          <a href="#">Whatsapp Marketing</a>
+          <a href="#">SMS Marketing</a>
+        </div>
+
+        <div class="footer-contents">
+          <h5>Development</h5>
+          <a href="#">Application</a>
+          <a href="#">Mobile Apps</a>
+        </div>
+
+        <div class="footer-contents">
+          <h5>Internship</h5>
+          <a href="#">Cloud</a>
+          <a href="#">Testing</a>
+          <a href="#">Web Development</a>
+          <a href="#">ECommerce</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-images">
+          <div class="footer-image">
+            <img src="Images/Kgelogo.png" style="height: 5em; width: 7em" />
+          </div>
+          <div class="footer-image">
+            <img
+              src="Images/nasscom-member.png"
+              style="height: 5em; width: 9em"
+            />
+          </div>
+          <div class="footer-image text">Cloud Partners</div>
+          <div class="footer-image">
+            <img src="Images/photo1.png" style="height: 6em; width: 10em" />
+          </div>
+        </div>
+        <p>Copyright © 2021 KGE Technologies</p>
+      </div>
+    </footer>
+
+    <!-- Javascript -->
+    <script src="internship-form.js"></script>
+  </body>
+</html>
