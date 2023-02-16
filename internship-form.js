@@ -226,6 +226,7 @@ function validateForm1() {
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   const countryRegex = /^[A-Za-z][A-Za-z\s]+$/
 
+
   if (firstName.value == "") {
     firstName.style.borderColor = "rgb(255, 153, 153)";
     firstName.style.boxShadow = "5px 5px 10px #888888";
@@ -396,8 +397,11 @@ function validateForm2() {
 
 //....................validating form3.....................
 
+
 function validateForm3() {
   let internship = document.getElementsByName("internship");
+  const other = document.getElementById("other");
+  const otherTextbox = document.getElementById("other-textbox");
 
   var selected = false;
   for (var i = 0; i < internship.length; i++) {
@@ -406,13 +410,34 @@ function validateForm3() {
       break;
     }
   }
+  var selectedOp = false;
+  if (other.checked) {
+    selectedOp = true;
+  }
+
   if (!selected) {
     document.getElementById("errorMessage10").innerHTML = "Select a choice";
-  } else {
-    document.getElementById("errorMessage10").innerHTML = "";
+    return false;
+  } else if(selected && selectedOp){
+     if(otherTextbox.value==""){
+      {
+        otherTextbox.style.borderColor = "rgb(255, 153, 153)";
+        otherTextbox.style.boxShadow = "5px 5px 10px #888888";
+        document.getElementById("errorMessage20").innerHTML =
+          "Enter a value for this field";
+          return false;
+      } 
+     }else{
+      otherTextbox.style.borderColor = "white";
+      otherTextbox.style.boxShadow = "none";
+      document.getElementById("errorMessage20").innerHTML = "";
+      return true;
+     }
   }
-  if (selected) return true;
-  else return false;
+  else {
+    document.getElementById("errorMessage10").innerHTML = "";
+    return true;
+  }
 }
 
 
